@@ -1,6 +1,7 @@
 // App.jsx
 import { useEffect } from 'react'
 import './App.css'
+import Nav from './components/Nav/Nav'
 
 function App() {
   useEffect(() => {
@@ -32,7 +33,7 @@ function App() {
   return (
     <>
       <div className="text-container">
-        Bubbles
+        <Nav />
       </div>
       <div className="gradient-bg">
         <svg xmlns="http://www.w3.org/2000/svg">
