@@ -28,6 +28,7 @@
     padding: 15px 15px;
     padding-top: 19px;
     border-radius: 25px;
+    transition: 0.3s;
 }
 
 .navbar-right {
@@ -35,3 +36,31 @@
     gap: 20px;
 }
 
+.navbar li:hover {
+    scale: 1.05;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6);
+    transition: 0.3s;
+}
+
+.navbar li:active {
+    scale: 1;
+    transition: 0.05s;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+}
+
+#joinus-btn {
+    scale: 1.1;
+    background: rgb(255, 128, 0);
+    transition: 0.3s;
+}
+
+#joinus-btn:hover {
+    background: white;
+    color: black;
+    transition: 0.3s;
+}
+
+#joinus-btn:active {
+    scale: 1.05;
+    transition: 0.05s;
+}

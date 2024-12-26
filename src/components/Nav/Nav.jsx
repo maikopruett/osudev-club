@@ -8,7 +8,7 @@ export default function Nav() {
             <li>Home</li>
             <div className='navbar-right'>
                 <li>Projects</li>
-                <li>Join Us</li>
+                <li id='joinus-btn'>Join Us</li>
                 <li>Members</li>
             </div>
         </ul>
