@@ -2,6 +2,7 @@
 import { useEffect } from 'react'
 import './App.css'
 import Nav from './components/Nav/Nav'
+import Main from './components/Pages/Main/Main'
 
 function App() {
   useEffect(() => {
@@ -34,6 +35,7 @@ function App() {
     <>
       <div className="text-container">
         <Nav />
+        <Main />
       </div>
       <div className="gradient-bg">
         <svg xmlns="http://www.w3.org/2000/svg">

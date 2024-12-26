@@ -1,0 +1,9 @@
+.navbar-container {
+    width: 80dvw;
+    max-width: 650px;
+    height: 55px;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
+    margin-top: 20px;
+    border-radius: 35px;
+    backdrop-filter: blur(10px);
+}
