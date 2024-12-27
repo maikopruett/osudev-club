@@ -10,11 +10,15 @@ export default function Nav() {
               <li>Home</li>
             </NavLink>
             <div className='navbar-right'>
-                <li>Projects</li>
+                <NavLink to={'/projects'}>
+                  <li>Projects</li>
+                </NavLink>
                 <NavLink to={'/join-us'}>
                   <li id='joinus-btn'>Join Us</li>
                 </NavLink>
-                <li>Members</li>
+                <NavLink to={'/members'}>
+                  <li>Members</li>
+                </NavLink>
             </div>
         </ul>
     </div>

@@ -4,6 +4,8 @@ import './App.css'
 import Nav from './components/Nav/Nav'
 import Main from './components/Pages/Main/Main'
 import Joinus from './components/Pages/Joinus/Joinus'
+import Members from "./components/Pages/Members/Members";
+import Projects from "./components/Pages/Projects/Projects";
 
 function App() {
   useEffect(() => {
@@ -39,7 +41,9 @@ function App() {
           <Nav />
           <Routes>
             <Route path='/' element={<Main />}/>
+            <Route path='/projects' element={<Projects />}/>
             <Route path='/join-us' element={<Joinus />}/>
+            <Route path='/members' element={<Members />}/>
           </Routes>
         </BrowserRouter>
       </div>
