@@ -1,11 +1,12 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import './Nav.css'
 
 export default function Nav() {
   return (
     <div className='navbar-container'>
         <ul className='navbar'>
-            <li>Home</li>
+              <li>Home</li>
             <div className='navbar-right'>
                 <li>Projects</li>
                 <li id='joinus-btn'>Join Us</li>
