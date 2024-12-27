@@ -155,10 +155,11 @@
 
 .navnew-mobile-menu li {
     margin: 20px 0;
-    font-size: 1.5rem;
+    font-size: 3rem;
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.3s ease;
+    border-radius: 10px;
 }
 
 .navnew-mobile-overlay.show .navnew-mobile-menu li {
@@ -170,24 +171,6 @@
 .navnew-mobile-menu a {
     text-decoration: none;
     color: white;
-}
-
-.navnew-close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 10px;
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-.navnew-mobile-overlay.show .navnew-close-btn {
-    opacity: 1;
 }
 
 /* Responsive breakpoint */
