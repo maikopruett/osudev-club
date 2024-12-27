@@ -64,3 +64,10 @@
     scale: 1.05;
     transition: 0.05s;
 }
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+
