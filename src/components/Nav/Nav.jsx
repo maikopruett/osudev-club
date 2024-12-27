@@ -44,9 +44,6 @@ export default function Nav() {
 
       {/* Mobile menu overlay */}
       <div className={`navnew-mobile-overlay ${isMenuOpen ? 'show' : ''}`}>
-        <button className='navnew-close-btn' onClick={closeMenu}>
-          ✕
-        </button>
         <ul className='navnew-mobile-menu'>
           <NavLink to={'/'} onClick={closeMenu}>
             <li>Home</li>
