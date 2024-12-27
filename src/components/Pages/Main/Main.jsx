@@ -6,7 +6,7 @@ export default function Main() {
     <div className='main-container'>
         <div className='main-header'>
             <h1>Welcome to the OSU Dev Club</h1>
-            <span class="wave">👋</span>
+            <span className="wave">👋</span>
         </div>
     </div>
   )
