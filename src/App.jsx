@@ -1,4 +1,4 @@
-// App.jsx
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useEffect } from 'react'
 import './App.css'
 import Nav from './components/Nav/Nav'
@@ -35,7 +35,11 @@ function App() {
     <>
       <div className="text-container">
         <Nav />
-        <Main />
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Main />}/>
+          </Routes>
+        </BrowserRouter>
       </div>
       <div className="gradient-bg">
         <svg xmlns="http://www.w3.org/2000/svg">
