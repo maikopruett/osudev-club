@@ -25,20 +25,16 @@
 .mainpage-container {
   min-height: 100vh;
   min-width: 100vw;
-  position: relative;
   overflow: scroll;
   background-color: #0d1117;
 }
 
 .mainpage-background {
-  position: fixed;
-  width: 100%;
-  height: 100%;
   z-index: 1;
 }
 
 .main-header {
-  margin-top: 60px;
+  margin-top: 80px;
   margin-bottom: -30px;
   display: flex;
   align-items: center;
@@ -94,7 +90,6 @@
 }
 
 .mainpage-content {
-  position: relative;
   z-index: 2;
   padding: 2rem;
   max-width: 1200px;
