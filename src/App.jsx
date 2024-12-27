@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import './App.css'
 import Nav from './components/Nav/Nav'
 import Main from './components/Pages/Main/Main'
+import Joinus from './components/Pages/Joinus/Joinus'
 
 function App() {
   useEffect(() => {
@@ -38,6 +39,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Main />}/>
+            <Route path='/join-us' element={<Joinus />}/>
           </Routes>
         </BrowserRouter>
       </div>
