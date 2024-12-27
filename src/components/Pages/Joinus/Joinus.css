@@ -1,0 +1,135 @@
+/* Joinus.css */
+
+.joinus-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .joinus-card {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    animation: joinusFadeIn 0.6s ease-out;
+  }
+  
+  .joinus-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .joinus-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .joinus-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .joinus-label {
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .joinus-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .joinus-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .joinus-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+  }
+  
+  .joinus-error {
+    color: #ff6b6b;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+  
+  .joinus-button-container {
+    opacity: 0;
+    transform: translateY(1rem);
+    pointer-events: none;
+    transition: all 0.5s ease;
+  }
+  
+  .joinus-button-container.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  .joinus-discord-button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #5865F2;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .joinus-discord-button:hover {
+    background-color: #4752c4;
+    transform: scale(1.05);
+  }
+  
+  .joinus-discord-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(88, 101, 242, 0.5);
+  }
+  
+  @keyframes joinusFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 640px) {
+    .joinus-card {
+      margin: 1rem;
+      padding: 1.5rem;
+    }
+    
+    .joinus-title {
+      font-size: 1.75rem;
+    }
+    
+    .joinus-input,
+    .joinus-discord-button {
+      padding: 0.75rem;
+    }
+  }

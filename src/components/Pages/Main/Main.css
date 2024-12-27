@@ -1,35 +1,215 @@
+/* Main.css */
+/* Keeping existing wave animation */
 .wave {
-    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-    animation-duration: 2.5s;        /* Change to speed up or slow down */
-    animation-iteration-count: infinite;  /* Never stop waving :) */
-    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
-    display: inline-block;
-    margin-left: 15px;
-    font-size: 60px;
-  }
-  
-  @keyframes wave-animation {
-      0% { transform: rotate( 0.0deg) }
-     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-     20% { transform: rotate(-8.0deg) }
-     30% { transform: rotate(14.0deg) }
-     40% { transform: rotate(-4.0deg) }
-     50% { transform: rotate(10.0deg) }
-     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-    100% { transform: rotate( 0.0deg) }
-  }
-  
-.main-header {
-  display: flex;
-  align-items: center;
-  font-size: 30px;
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 60px;
 }
 
-.main-container {
-  margin-top: 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100dvw;
+@keyframes wave-animation {
+  0% { transform: rotate(0.0deg) }
+  10% { transform: rotate(14.0deg) }
+  20% { transform: rotate(-8.0deg) }
+  30% { transform: rotate(14.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(10.0deg) }
+  60% { transform: rotate(0.0deg) }
+  100% { transform: rotate(0.0deg) }
 }
 
+/* New styles for enhanced landing page */
+.mainpage-container {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #0d1117;
+}
+
+.mainpage-background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.mainpage-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.mainpage-circle1 {
+  background: rgba(64, 156, 255, 0.3);
+  width: 300px;
+  height: 300px;
+  top: -50px;
+  left: -50px;
+  animation: float1 8s infinite ease-in-out;
+}
+
+.mainpage-circle2 {
+  background: rgba(120, 70, 255, 0.3);
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  right: -100px;
+  animation: float2 10s infinite ease-in-out;
+}
+
+.mainpage-circle3 {
+  background: rgba(64, 255, 190, 0.3);
+  width: 350px;
+  height: 350px;
+  bottom: -100px;
+  left: 30%;
+  animation: float3 12s infinite ease-in-out;
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(30px) translateX(20px); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-40px) translateX(-25px); }
+}
+
+@keyframes float3 {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(25px) translateX(-20px); }
+}
+
+.mainpage-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mainpage-title {
+  font-size: 3rem;
+  color: white;
+  margin: 0;
+}
+
+.mainpage-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  margin: 1rem 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mainpage-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mainpage-mission-card {
+  margin: 3rem 0;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.mainpage-card-title {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.mainpage-mission-text {
+  color: #a8b3cf;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.mainpage-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.mainpage-feature-card {
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+.mainpage-feature-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.mainpage-feature-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.mainpage-feature-card:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.mainpage-feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.mainpage-feature-title {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.mainpage-feature-text {
+  color: #a8b3cf;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .mainpage-title {
+      font-size: 2rem;
+  }
+
+  .wave {
+      font-size: 40px;
+  }
+
+  .mainpage-content {
+      padding: 1rem;
+  }
+
+  .mainpage-card {
+      padding: 1.5rem;
+  }
+
+  .mainpage-features {
+      grid-template-columns: 1fr;
+  }
+
+  .mainpage-card-title {
+      font-size: 1.5rem;
+  }
+
+  .mainpage-mission-text {
+      font-size: 1rem;
+  }
+}

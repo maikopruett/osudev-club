@@ -1,27 +1,36 @@
-.navbar-container {
+/* Nav.css */
+.navnew-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80dvw;
+    max-width: 650px;
+    height: 60px;
+    z-index: 1000;
+}
+
+.navnew-desktop {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80dvw;
-    max-width: 650px;
-    height: 60px;
+    width: 100%;
+    height: 100%;
     box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
-    margin-top: 20px;
     border-radius: 35px;
     backdrop-filter: blur(10px);
     padding: 0px 13px;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
     list-style: none;
+    margin: 0;
 }
 
-.navbar li {
+.navnew-right {
+    display: flex;
+    gap: 20px;
+}
+
+.navnew-desktop li {
     background: rgba(255, 255, 255, 0.4);
     font-size: 1.2rem;
     line-height: 0;
@@ -31,43 +40,169 @@
     transition: 0.3s;
 }
 
-.navbar-right {
-    display: flex;
-    gap: 20px;
-}
-
-.navbar li:hover {
-    scale: 1.05;
+.navnew-desktop li:hover {
+    transform: scale(1.05);
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6);
-    transition: 0.3s;
 }
 
-.navbar li:active {
-    scale: 1;
+.navnew-desktop li:active {
+    transform: scale(1);
     transition: 0.05s;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
 }
 
-#joinus-btn {
-    scale: 1.1;
-    background: rgb(255, 128, 0);
-    transition: 0.3s;
+.navnew-joinus-btn {
+    transform: scale(1.1);
+    background: rgb(255, 128, 0) !important;
 }
 
-#joinus-btn:hover {
-    background: white;
-    color: black;
-    transition: 0.3s;
+.navnew-joinus-btn:hover {
+    background: white !important;
+    color: black !important;
 }
 
-#joinus-btn:active {
-    scale: 1.05;
-    transition: 0.05s;
+.navnew-joinus-btn:active {
+    transform: scale(1.05) !important;
 }
 
-.navbar a {
+.navnew-desktop a {
     text-decoration: none;
     color: white;
 }
 
+/* Mobile menu button */
+.navnew-mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+}
 
+.navnew-hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navnew-hamburger::before,
+.navnew-hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.navnew-hamburger::before {
+    transform: translateY(-8px);
+}
+
+.navnew-hamburger::after {
+    transform: translateY(8px);
+}
+
+.navnew-hamburger.open {
+    background: transparent;
+}
+
+.navnew-hamburger.open::before {
+    transform: rotate(45deg);
+}
+
+.navnew-hamburger.open::after {
+    transform: rotate(-45deg);
+}
+
+/* Mobile menu overlay */
+.navnew-mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navnew-mobile-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.navnew-mobile-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.navnew-mobile-menu li {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.navnew-mobile-overlay.show .navnew-mobile-menu li {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+.navnew-mobile-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.navnew-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.navnew-mobile-overlay.show .navnew-close-btn {
+    opacity: 1;
+}
+
+/* Responsive breakpoint */
+@media (max-width: 768px) {
+    .navnew-desktop {
+        display: none;
+    }
+
+    .navnew-mobile-toggle {
+        display: block;
+    }
+
+    .navnew-container {
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        border-radius: 35px;
+    }
+}
