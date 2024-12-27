@@ -1,135 +1,231 @@
 /* Joinus.css */
 
+/* Container */
 .joinus-container {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .joinus-card {
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(8px);
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Mobile background */
+.joinus-mobile-bg {
+    display: none;
+}
+
+/* Card styles */
+.joinus-card {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
     animation: joinusFadeIn 0.6s ease-out;
-  }
-  
-  .joinus-title {
-    font-size: 2.5rem;
-    font-weight: bold;
+}
+
+.joinus-content {
+    width: 100%;
+}
+
+.joinus-title {
     color: white;
-    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
     text-align: center;
-  }
-  
-  .joinus-form {
+}
+
+.joinus-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Form styles */
+.joinus-form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-  }
-  
-  .joinus-input-group {
+}
+
+.joinus-input-group {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-  }
-  
-  .joinus-label {
+}
+
+.joinus-label {
     color: white;
-    font-size: 0.875rem;
-    font-weight: 500;
-  }
-  
-  .joinus-input {
+    font-size: 0.9rem;
+}
+
+.joinus-input {
     width: 100%;
     padding: 0.75rem 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     color: white;
     font-size: 1rem;
     transition: all 0.3s ease;
-  }
-  
-  .joinus-input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-  }
-  
-  .joinus-input:focus {
+}
+
+.joinus-input:focus {
     outline: none;
-    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
-  }
-  
-  .joinus-error {
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.joinus-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.joinus-error {
     color: #ff6b6b;
     font-size: 0.875rem;
     margin-top: 0.25rem;
-  }
-  
-  .joinus-button-container {
+}
+
+/* Button styles */
+.joinus-button-container {
     opacity: 0;
-    transform: translateY(1rem);
+    transform: translateY(10px);
+    transition: all 0.3s ease;
     pointer-events: none;
-    transition: all 0.5s ease;
-  }
-  
-  .joinus-button-container.show {
+}
+
+.joinus-button-container.show {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
-  }
-  
-  .joinus-discord-button {
+}
+
+.joinus-discord-button {
     width: 100%;
-    padding: 0.75rem 1rem;
-    background-color: #5865F2;
+    padding: 0.875rem;
+    background: #5865F2;
     border: none;
     border-radius: 8px;
     color: white;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-  }
-  
-  .joinus-discord-button:hover {
-    background-color: #4752c4;
-    transform: scale(1.05);
-  }
-  
-  .joinus-discord-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(88, 101, 242, 0.5);
-  }
-  
-  @keyframes joinusFadeIn {
+}
+
+.joinus-discord-button:hover {
+    background: #4752c4;
+    transform: translateY(-2px);
+}
+
+.joinus-discord-button:active {
+    transform: translateY(0);
+}
+
+@keyframes joinusFadeIn {
     from {
-      opacity: 0;
-      transform: translateY(20px);
+        opacity: 0;
+        transform: translateY(20px);
     }
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 640px) {
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .joinus-container {
+        padding: 0;
+        margin: 0;
+    }
+
     .joinus-card {
-      margin: 1rem;
-      padding: 1.5rem;
+        margin: 0;
+        height: calc(100vh - 80px);
+        max-width: none;
+        width: 100%;
+        border-radius: 0;
+        display: flex;
+        align-items: center;
+        background: transparent;
+        backdrop-filter: none;
+        border: none;
     }
-    
+
+    .joinus-mobile-bg {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .joinus-mobile-circle1 {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: rgba(88, 101, 242, 0.3);
+        border-radius: 50%;
+        filter: blur(80px);
+        top: 20%;
+        left: -100px;
+        animation: floatCircle1 10s infinite ease-in-out;
+    }
+
+    .joinus-mobile-circle2 {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background: rgba(255, 128, 0, 0.2);
+        border-radius: 50%;
+        filter: blur(90px);
+        bottom: 10%;
+        right: -150px;
+        animation: floatCircle2 12s infinite ease-in-out;
+    }
+
+    .joinus-content {
+        padding: 2rem;
+        width: 100%;
+        max-width: none;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
     .joinus-title {
-      font-size: 1.75rem;
+        font-size: 2.5rem;
     }
-    
-    .joinus-input,
+
+    .joinus-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .joinus-input {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
     .joinus-discord-button {
-      padding: 0.75rem;
+        padding: 1rem;
+        font-size: 1.2rem;
     }
-  }
+}
+
+@keyframes floatCircle1 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(30px, 20px); }
+}
+
+@keyframes floatCircle2 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-30px, -20px); }
+}
