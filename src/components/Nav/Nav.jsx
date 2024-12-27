@@ -11,7 +11,7 @@ export default function Nav() {
             </NavLink>
             <div className='navbar-right'>
                 <li>Projects</li>
-                <NavLink>
+                <NavLink to={'/join-us'}>
                   <li id='joinus-btn'>Join Us</li>
                 </NavLink>
                 <li>Members</li>
