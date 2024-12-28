@@ -162,5 +162,10 @@
     .joinus-form {
         width: 100%;
     }
+
+    .joinus-title {
+        line-height: 45px;
+        margin-bottom: 15px;
+    }
 }
 
