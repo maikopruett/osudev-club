@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+import { Resend } from 'resend';
+import { Email } from './email';
 import './Joinus.css';
+import Welcome from '../../../Emails/Welcome';
 
 const Joinus = () => {
   const [email, setEmail] = useState('');
@@ -18,6 +21,17 @@ const Joinus = () => {
       setShowLink(true);
     }
   };
+
+const resend = new Resend('re_123456789');
+
+  async function POST() {
+    await resend.emails.send({
+        from: 'you@example.com',
+        to: 'user@gmail.com',
+        subject: 'hello world',
+        react: Welcome(),
+      });
+  }
 
   return (
     <div className="joinus-container">
@@ -55,7 +69,7 @@ const Joinus = () => {
             </div>
 
             <div className={`joinus-button-container ${showLink ? 'show' : ''}`}>
-              <button type="button" className="joinus-discord-button">
+              <button onClick={POST} type="button" className="joinus-discord-button">
                 Join Discord
               </button>
             </div>
