@@ -31,7 +31,6 @@ const Joinus = () => {
         },
         't1OpeCYcgnV-3wbeN' // Replace with your EmailJS public key
       );
-      alert('Welcome email sent successfully!');
     } catch (error) {
       console.error('Error sending email:', error);
       alert('Failed to send welcome email. Please try again later.');
