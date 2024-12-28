@@ -6,7 +6,7 @@ export const projects = [
       shortDescription: "Personal portfolio built with React",
       fullDescription: "A modern portfolio website showcasing my projects and skills, built with React and modern web technologies.",
       technologies: ["React", "JavaScript", "CSS"],
-      imageUrl: "/api/placeholder/600/400",
+      imageUrl: "/portfolio.webp",
       links: {
         github: "https://github.com/username/portfolio",
         live: "https://portfolio.example.com"
@@ -25,7 +25,7 @@ export const projects = [
       shortDescription: "Full-stack e-commerce solution",
       fullDescription: "A complete e-commerce platform with user authentication, product management, and shopping cart functionality.",
       technologies: ["React", "Node.js", "MongoDB"],
-      imageUrl: "/api/placeholder/600/400",
+      imageUrl: "/ecommerce.jpeg",
       links: {
         github: "https://github.com/username/ecommerce",
         live: "https://ecommerce.example.com"
