@@ -1,19 +1,19 @@
-.members-container {
+.memberspage-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #0d1117; /* Same background color as .mainpage-container */
-    color: #fff; /* Text color from .mainpage-title */
+    background-color: #0d1117; /* Same background color */
+    color: #fff;
     font-family: 'Arial', sans-serif;
     text-align: center;
   }
   
-  .mainpage-background {
+  .memberspage-background {
     z-index: 1;
   }
   
-  .mainpage-circle {
+  .memberspage-circle {
     position: absolute;
     border-radius: 50%;
     filter: blur(60px);
@@ -34,20 +34,20 @@
     50% { transform: translateY(25px) translateX(-20px); }
   }
   
-  .mainpage-content {
+  .memberspage-content {
     z-index: 2;
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
   }
   
-  .mainpage-title {
+  .memberspage-title {
     font-size: 3rem;
     color: white;
     margin-bottom: 30px;
   }
   
-  .mainpage-card {
+  .memberspage-card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -57,48 +57,48 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .mainpage-card:hover {
+  .memberspage-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
   
-  .mainpage-card-title {
+  .memberspage-card-title {
     color: white;
     font-size: 2rem;
     margin-bottom: 1rem;
   }
   
-  .mainpage-mission-text {
+  .memberspage-mission-text {
     color: #a8b3cf;
     font-size: 1.1rem;
     line-height: 1.6;
   }
   
-  .mainpage-features {
+  .memberspage-features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
     margin-top: 3rem;
   }
   
-  .mainpage-feature-card {
+  .memberspage-feature-card {
     text-align: center;
     animation: fadeInUp 0.8s ease-out;
     animation-fill-mode: both;
   }
   
-  .mainpage-feature-icon {
+  .memberspage-feature-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
   }
   
-  .mainpage-feature-title {
+  .memberspage-feature-title {
     color: white;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
   
-  .mainpage-feature-text {
+  .memberspage-feature-text {
     color: #a8b3cf;
     font-size: 1rem;
     line-height: 1.5;
@@ -106,43 +106,43 @@
   
   @keyframes fadeInUp {
     from {
-        opacity: 0;
-        transform: translateY(20px);
+      opacity: 0;
+      transform: translateY(20px);
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
     }
   }
   
   /* Responsive design */
   @media (max-width: 768px) {
-    .mainpage-title {
-        font-size: 2rem;
+    .memberspage-title {
+      font-size: 2rem;
     }
   
     .wave {
-        font-size: 50px;
+      font-size: 50px;
     }
   
-    .mainpage-content {
-        padding: 1rem;
+    .memberspage-content {
+      padding: 1rem;
     }
   
-    .mainpage-card {
-        padding: 1.5rem;
+    .memberspage-card {
+      padding: 1.5rem;
     }
   
-    .mainpage-features {
-        grid-template-columns: 1fr;
+    .memberspage-features {
+      grid-template-columns: 1fr;
     }
   
-    .mainpage-card-title {
-        font-size: 1.5rem;
+    .memberspage-card-title {
+      font-size: 1.5rem;
     }
   
-    .mainpage-mission-text {
-        font-size: 1rem;
+    .memberspage-mission-text {
+      font-size: 1rem;
     }
   
     .main-header h1 {
