@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Joinus.css';
 
-
 const Joinus = () => {
   const [email, setEmail] = useState('');
   const [isValid, setIsValid] = useState(false);
