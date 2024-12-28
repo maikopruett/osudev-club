@@ -19,7 +19,7 @@ export default function Projects() {
   return (
     <div className="projects-container">
       <div className="projects-content">
-        <h1 className="projects-title">Our Projects</h1>
+        <h1 className="projects-title">Example Projects</h1>
         <div className="projects-wrapper">
           <div className="projects-grid">
             {projects.map((project) => (
