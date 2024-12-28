@@ -26,12 +26,12 @@ const Joinus = () => {
     try {
       // Sending email using EmailJS
       await emailjs.send(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID, // Replace with your EmailJS service ID
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID, // Replace with your EmailJS template ID
+        process.env.REACT_APP_EMAILJS_SERVICE_ID, 
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID, 
         {
           to_email: email, // Use the email entered by the user
         },
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY // Replace with your EmailJS public key
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY 
       );
     } catch (error) {
       console.error('Error sending email:', error);
