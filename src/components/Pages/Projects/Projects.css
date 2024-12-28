@@ -4,7 +4,7 @@
   min-width: 100%;
   background-color: #0d1117;
   padding: 2rem;
-  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .projects-content {
@@ -276,5 +276,17 @@
   
   .projects-container {
     padding: 1rem;
+  }
+
+  .modal-content {
+    height: 80vh;
+    overflow-x: hidden;
+  }
+
+  .modal-close {
+    top: 0;
+    right: 5px;
+    scale: 1.5;
+    -webkit-tap-highlight-color: transparent;
   }
 }
