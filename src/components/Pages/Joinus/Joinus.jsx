@@ -26,12 +26,12 @@ const Joinus = () => {
     try {
       // Sending email using EmailJS
       await emailjs.send(
-        process.env.VITE_EMAILJS_SERVICE_ID, 
-        process.env.VITE_EMAILJS_TEMPLATE_ID, 
+        import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
         {
           to_email: email, // Use the email entered by the user
         },
-        process.env.VITE_EMAILJS_PUBLIC_KEY 
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY 
       );
     } catch (error) {
       console.error('Error sending email:', error);
