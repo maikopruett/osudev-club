@@ -289,4 +289,8 @@
     scale: 1.5;
     -webkit-tap-highlight-color: transparent;
   }
+
+  .projects-wrapper {
+    background: none;
+  }
 }
