@@ -47,33 +47,6 @@
   filter: blur(60px);
 }
 
-.mainpage-circle1 {
-  background: rgba(64, 156, 255, 0.3);
-  width: 300px;
-  height: 300px;
-  top: -50px;
-  left: -50px;
-  animation: float1 8s infinite ease-in-out;
-}
-
-.mainpage-circle2 {
-  background: rgba(120, 70, 255, 0.3);
-  width: 400px;
-  height: 400px;
-  top: 50%;
-  right: -100px;
-  animation: float2 10s infinite ease-in-out;
-}
-
-.mainpage-circle3 {
-  background: rgba(64, 255, 190, 0.3);
-  width: 350px;
-  height: 350px;
-  bottom: -100px;
-  left: 30%;
-  animation: float3 12s infinite ease-in-out;
-}
-
 @keyframes float1 {
   0%, 100% { transform: translateY(0) translateX(0); }
   50% { transform: translateY(30px) translateX(20px); }
