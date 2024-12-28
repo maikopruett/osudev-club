@@ -7,12 +7,14 @@ const Joinus = () => {
   const [isValid, setIsValid] = useState(false);
   const [showLink, setShowLink] = useState(false);
 
+  // Validate Oregon State Email
   const validateEmail = (value) => {
     const isOregonState = value.endsWith('@oregonstate.edu');
     setIsValid(isOregonState);
     setShowLink(isOregonState);
   };
 
+  // Function to handle sending the email
   const handleDiscordClick = async () => {
     if (!isValid) {
       alert('Please use a valid Oregon State email.');
@@ -24,7 +26,10 @@ const Joinus = () => {
       await emailjs.send(
         'service_jz3t3tt', // Replace with your EmailJS service ID
         'template_jd1fu02', // Replace with your EmailJS template ID
-        { email }, // Template variables (use `email` here)
+        {
+          to_name: 'OSU Dev Club Member', // Set the recipient's name dynamically if needed
+          to_email: email, // Use the email entered by the user
+        },
         't1OpeCYcgnV-3wbeN' // Replace with your EmailJS public key
       );
       alert('Welcome email sent successfully!');
@@ -34,6 +39,7 @@ const Joinus = () => {
     }
   };
 
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     if (isValid) {
