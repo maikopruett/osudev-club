@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    background: #0d1117;
+    background: transparent;
     border-radius: 15px;
     max-width: 950px;
   }
@@ -18,7 +18,8 @@
   }
   
   .verification-card {
-    background:  rgba(255, 255, 255, 0.05);
+    background:  rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 3rem;
     width: 100%;
@@ -39,7 +40,7 @@
   
   .title {
     font-size: 2.5rem;
-    color: #2d3748;
+    color: white;
     margin-bottom: 2rem;
     font-weight: bold;
   }
@@ -101,7 +102,7 @@
   }
   
   .help-text {
-    color: #718096;
+    color: rgb(207, 207, 207);
     margin-top: 1rem;
     font-size: 0.9rem;
   }
