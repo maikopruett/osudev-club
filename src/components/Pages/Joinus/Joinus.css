@@ -2,12 +2,11 @@
 
 /* Container */
 .joinus-container {
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
-    position: relative;
+    width: 100dvw;
+    height: 100dvh;
     overflow: hidden;
 }
 
@@ -141,13 +140,16 @@
 
 /* Mobile styles */
 @media (max-width: 768px) {
-    .joinus-container {
-        width: 100dvw;
-        height: 100dvh;
+   
+    .joinus-container{
+        background: #0d1117;
     }
 
     .joinus-card {
         width: 90dvw;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .joinus-form {
