@@ -1,6 +1,5 @@
-import React from 'react';
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom'; // Import NavLink
+import React, { useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
 import './Joinus.css';
 import emailjs from 'emailjs-com'; // Import EmailJS
 
@@ -8,6 +7,7 @@ const Joinus = () => {
   const [email, setEmail] = useState('');
   const [isValid, setIsValid] = useState(false);
   const [showLink, setShowLink] = useState(false);
+  const navigate = useNavigate(); // Initialize the navigate function
 
   // Validate Oregon State Email
   const validateEmail = (value) => {
@@ -16,8 +16,10 @@ const Joinus = () => {
     setShowLink(isOregonState);
   };
 
-  // Function to handle sending the email
-  const handleDiscordClick = async () => {
+  // Function to handle sending the email and redirecting
+  const handleDiscordClick = async (e) => {
+    e.preventDefault(); // Prevent default behavior of NavLink (which is navigating immediately)
+
     if (!isValid) {
       alert('Please use a valid Oregon State email.');
       return;
@@ -33,6 +35,9 @@ const Joinus = () => {
         },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY 
       );
+
+      // After email is sent successfully, navigate to the verification page
+      navigate('/verification');
     } catch (error) {
       console.error('Error sending email:', error);
       alert('Failed to send welcome email. Please try again later.');
@@ -83,9 +88,13 @@ const Joinus = () => {
             </div>
 
             <div className={`joinus-button-container ${showLink ? 'show' : ''}`}>
-              <NavLink to="/verification" className="joinus-discord-button">
+              <button
+                type="button"
+                className="joinus-discord-button"
+                onClick={handleDiscordClick} // Call handleDiscordClick when button is clicked
+              >
                 Join Discord
-              </NavLink>
+              </button>
             </div>
           </form>
         </div>
