@@ -27,7 +27,6 @@ const Joinus = () => {
         'service_jz3t3tt', // Replace with your EmailJS service ID
         'template_jd1fu02', // Replace with your EmailJS template ID
         {
-          to_name: 'OSU Dev Club Member', // Set the recipient's name dynamically if needed
           to_email: email, // Use the email entered by the user
         },
         't1OpeCYcgnV-3wbeN' // Replace with your EmailJS public key
