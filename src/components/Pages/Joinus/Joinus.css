@@ -142,59 +142,16 @@
 /* Mobile styles */
 @media (max-width: 768px) {
     .joinus-container {
-        padding: 0;
-        margin: 0;
+        width: 100dvw;
+        height: 100dvh;
     }
 
     .joinus-card {
-        margin: 0;
-        height: calc(100vh - 80px);
-        max-width: none;
+        width: 90dvw;
+    }
+
+    .joinus-form {
         width: 100%;
-        border-radius: 0;
-        display: flex;
-        align-items: center;
-        background: transparent;
-        backdrop-filter: none;
-        border: none;
-    }
-
-    .joinus-mobile-bg {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-    }
-
-    .joinus-content {
-        padding: 2rem;
-        width: 100%;
-        max-width: none;
-        background: rgba(0, 0, 0, 0.4);
-        backdrop-filter: blur(10px);
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .joinus-title {
-        font-size: 2.5rem;
-    }
-
-    .joinus-subtitle {
-        font-size: 1.1rem;
-    }
-
-    .joinus-input {
-        padding: 1rem;
-        font-size: 1.1rem;
-    }
-
-    .joinus-discord-button {
-        padding: 1rem;
-        font-size: 1.2rem;
     }
 }
 
