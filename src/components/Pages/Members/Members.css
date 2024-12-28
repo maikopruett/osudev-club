@@ -1,13 +1,13 @@
 .memberspage-container {
     display: flex;
     justify-content: center;
-    align-items: center;
     min-height: 100vh;
     min-width: 100vw;
     background-color: #0d1117; /* Same background color */
     color: #fff;
     font-family: 'Arial', sans-serif;
     text-align: center;
+    overflow: scroll;
   }
   
   .memberspage-background {
