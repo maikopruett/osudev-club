@@ -106,6 +106,9 @@
 }
 
 .joinus-discord-button {
+    display: block;
+    margin-top: -10px;
+    text-align: center;
     width: 100%;
     padding: 0.875rem;
     background: #5865F2;
@@ -116,6 +119,7 @@
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .joinus-discord-button:hover {

@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom'; // Import NavLink
 import './Joinus.css';
 import emailjs from 'emailjs-com'; // Import EmailJS
 
@@ -81,13 +83,9 @@ const Joinus = () => {
             </div>
 
             <div className={`joinus-button-container ${showLink ? 'show' : ''}`}>
-              <button
-                type="button"
-                className="joinus-discord-button"
-                onClick={handleDiscordClick}
-              >
+              <NavLink to="/verification" className="joinus-discord-button">
                 Join Discord
-              </button>
+              </NavLink>
             </div>
           </form>
         </div>

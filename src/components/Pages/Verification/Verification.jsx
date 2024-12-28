@@ -1,40 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { supabase } from '../../Auth/supabase';
 import { BrowserView, MobileView } from 'react-device-detect';
 import './Verification.css';
 
 export default function Verification() {
-  const [userEmail, setUserEmail] = useState('');
-  const [resendSuccess, setResendSuccess] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    const getUserEmail = async () => {
-      const { data: { user } } = await supabase.auth.getUser();
-      if (user?.email) {
-        setUserEmail(user.email);
-      }
-    };
-    getUserEmail();
-  }, []);
-
-  const handleResendEmail = async () => {
-    setIsLoading(true);
-    try {
-      const { error } = await supabase.auth.resend({
-        type: 'signup',
-        email: userEmail,
-      });
-
-      if (!error) {
-        setResendSuccess(true);
-        setTimeout(() => setResendSuccess(false), 3000);
-      }
-    } catch (error) {
-      console.error('Error resending email:', error);
-    }
-    setIsLoading(false);
-  };
 
   return (
     <div className="verification-wrapper">
@@ -102,5 +70,4 @@ export default function Verification() {
         </div>
       </MobileView>
     </div>
-  );
-}
+  )}

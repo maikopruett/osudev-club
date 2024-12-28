@@ -6,6 +6,7 @@ import Main from './components/Pages/Main/Main'
 import Joinus from './components/Pages/Joinus/Joinus'
 import Members from "./components/Pages/Members/Members";
 import Projects from "./components/Pages/Projects/Projects";
+import Verification from "./components/Pages/Verification/Verification";
 
 function App() {
   useEffect(() => {
@@ -44,6 +45,7 @@ function App() {
             <Route path='/projects' element={<Projects />}/>
             <Route path='/join-us' element={<Joinus />}/>
             <Route path='/members' element={<Members />}/>
+            <Route path='/verification' element={<Verification />}/>
           </Routes>
         </BrowserRouter>
       </div>
