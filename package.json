@@ -10,8 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "@react-email/components": "0.0.31",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "react-router-dom": "^7.1.1"
   },
   "devDependencies": {
@@ -24,6 +25,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
+    "react-email": "3.0.4",
     "vite": "^6.0.5"
   }
 }
