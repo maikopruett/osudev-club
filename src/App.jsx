@@ -5,7 +5,7 @@ import Nav from './components/Nav/Nav'
 import Main from './components/Pages/Main/Main'
 import Joinus from './components/Pages/Joinus/Joinus'
 import Members from "./components/Pages/Members/Members";
-import Projects from "./components/Pages/Projects/Projects";
+import Projects from "./components/Pages/Projects/Projects.jsx";
 import Verification from "./components/Pages/Verification/Verification";
 
 function App() {
