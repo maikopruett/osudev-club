@@ -150,5 +150,9 @@
       font-size: 2rem;
       line-height: 40px;
     }
+
+    .memberspage-container {
+      background: #14252d;
+    }
   }
   
