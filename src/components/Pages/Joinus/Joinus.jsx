@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Joinus.css';
+import emailjs from 'emailjs-com'; // Import EmailJS
 
 const Joinus = () => {
   const [email, setEmail] = useState('');
@@ -10,6 +11,27 @@ const Joinus = () => {
     const isOregonState = value.endsWith('@oregonstate.edu');
     setIsValid(isOregonState);
     setShowLink(isOregonState);
+  };
+
+  const handleDiscordClick = async () => {
+    if (!isValid) {
+      alert('Please use a valid Oregon State email.');
+      return;
+    }
+
+    try {
+      // Sending email using EmailJS
+      await emailjs.send(
+        'service_jz3t3tt', // Replace with your EmailJS service ID
+        'template_jd1fu02', // Replace with your EmailJS template ID
+        { email }, // Template variables (use `email` here)
+        't1OpeCYcgnV-3wbeN' // Replace with your EmailJS public key
+      );
+      alert('Welcome email sent successfully!');
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Failed to send welcome email. Please try again later.');
+    }
   };
 
   const handleSubmit = (e) => {
@@ -55,7 +77,11 @@ const Joinus = () => {
             </div>
 
             <div className={`joinus-button-container ${showLink ? 'show' : ''}`}>
-              <button type="button" className="joinus-discord-button">
+              <button
+                type="button"
+                className="joinus-discord-button"
+                onClick={handleDiscordClick}
+              >
                 Join Discord
               </button>
             </div>
