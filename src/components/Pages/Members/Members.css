@@ -1,8 +1,8 @@
 .memberspage-container {
     display: flex;
     justify-content: center;
-    min-height: 100vh;
-    min-width: 100vw;
+    min-height: 100%;
+    min-width: 100%;
     background-color: #0d1117; /* Same background color */
     color: #fff;
     font-family: 'Arial', sans-serif;
