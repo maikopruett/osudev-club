@@ -1,6 +1,8 @@
 /* Projects Page Styling */
 .projects-container {
-    height: 100%;
+    height: auto;
+    border-radius: 25px;
+    margin-top: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,6 +102,12 @@
   
     .projects-card-description {
       font-size: 1rem;
+    }
+
+    .projects-container {
+        height: 100%;
+        margin-top: 0;
+        border-radius: 0;
     }
   }
   

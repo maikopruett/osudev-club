@@ -27,7 +27,7 @@ export default function Members() {
       <div className="mainpage-content">
         {/* Header section */}
         <div className="main-header">
-          <h1 className="mainpage-title">Members Component Coming Soon!</h1>
+          <h1 className="mainpage-title">Members Page Coming Soon!</h1>
         </div>
 
         {/* Mission statement card */}
