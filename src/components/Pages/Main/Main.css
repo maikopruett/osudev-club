@@ -194,4 +194,8 @@
     font-size: 2rem;
     line-height: 40px;
   }
+
+  .mainpage-container {
+    padding-bottom: 100px;
+  }
 }

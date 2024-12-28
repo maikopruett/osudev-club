@@ -3,6 +3,8 @@ import './Members.css'
 
 export default function Members() {
   return (
-    <div>Members</div>
+    <div className='members-container'>
+        Members
+    </div>
   )
 }
