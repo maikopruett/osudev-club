@@ -4,43 +4,38 @@ import './Projects.css';
 export default function Projects() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const openProject = () => {
+  const handleCardClick = () => {
     setIsOpen(true);
   };
 
-  const closeProject = () => {
+  const handleCloseClick = () => {
     setIsOpen(false);
   };
 
   return (
-    <div className='projects-container'>
-      {/* Project Card */}
-      <div className='project-card' onClick={openProject}>
-        <h3 className='project-title'>OSU Dev Club</h3>
-        <p className='project-description'>
-          A community of passionate developers at Oregon State University, 
-          dedicated to fostering innovation and collaboration through exciting projects and events.
+    <div className="projects-container">
+      <h2 className="projects-title">Projects</h2>
+
+      {/* Projects Card */}
+      <div className="projects-card" onClick={handleCardClick}>
+        <h3 className="projects-card-title">OSU Dev Club</h3>
+        <p className="projects-card-description">
+          A solo project to build a platform for OSU students to <strong>host</strong> and <strong>attend</strong> events. Built with ReactJS and Supabase.
         </p>
       </div>
 
-      {/* Modal for project details */}
+      {/* Modal for the OSU Dev Club project */}
       {isOpen && (
-        <div className='project-modal'>
-          <div className='project-modal-content'>
-            <button className='close-btn' onClick={closeProject}>X</button>
-            <h2 className='modal-title'>OSU Dev Club Project</h2>
-            <p className='modal-description'>
-              OSU Dev Club is an ongoing project designed to bring together developers at Oregon State University 
-              to collaborate on projects, attend workshops, network with industry professionals, and more.
-            </p>
-            <div className='modal-features'>
-              <h3>Key Features:</h3>
-              <ul>
-                <li>Community engagement through events and projects.</li>
-                <li>Networking with fellow developers and industry leaders.</li>
-                <li>Workshops and hackathons to enhance skills.</li>
-              </ul>
-            </div>
+        <div className="projects-modal">
+          <div className="projects-modal-content">
+            <button className="projects-close-btn" onClick={handleCloseClick}>✖</button>
+            <h3>OSU Dev Club</h3>
+            <p><strong>Purpose:</strong> Connect OSU students through a platform for sharing and attending events.</p>
+            <ul>
+              <li><strong>Frontend:</strong> ReactJS</li>
+              <li><strong>Backend:</strong> Supabase</li>
+              <li><strong>Features:</strong> Event creation, RSVP, user authentication</li>
+            </ul>
           </div>
         </div>
       )}
