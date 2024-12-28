@@ -22,12 +22,12 @@ const Joinus = () => {
     }
   };
 
-const resend = new Resend('re_123456789');
+const resend = new Resend(process.env.RESEND_API_KEY);
 
   async function POST() {
     await resend.emails.send({
-        from: 'you@example.com',
-        to: 'user@gmail.com',
+        from: 'Maiko <onboarding@resend.dev>',
+        to: 'maikopruett@gmail.com',
         subject: 'hello world',
         react: Welcome(),
       });
