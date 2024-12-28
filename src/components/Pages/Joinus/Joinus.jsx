@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { Resend } from 'resend';
-import { Email } from './email';
 import './Joinus.css';
-import Welcome from '../../../Emails/Welcome';
+
 
 const Joinus = () => {
   const [email, setEmail] = useState('');
@@ -21,17 +19,6 @@ const Joinus = () => {
       setShowLink(true);
     }
   };
-
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-  async function POST() {
-    await resend.emails.send({
-        from: 'Maiko <onboarding@resend.dev>',
-        to: 'maikopruett@gmail.com',
-        subject: 'hello world',
-        react: Welcome(),
-      });
-  }
 
   return (
     <div className="joinus-container">
@@ -69,7 +56,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
             </div>
 
             <div className={`joinus-button-container ${showLink ? 'show' : ''}`}>
-              <button onClick={POST} type="button" className="joinus-discord-button">
+              <button type="button" className="joinus-discord-button">
                 Join Discord
               </button>
             </div>
