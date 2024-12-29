@@ -19,6 +19,14 @@
   animation: gradientFlow 8s linear infinite;
 }
 
+.logo-underline {
+  height: 4px;
+  width: 0;
+  background: linear-gradient(90deg, #ff6200, #ff4400);
+  margin: 0.5rem auto;
+  animation: underlineGrow 1.5s forwards ease-out;
+}
+
 @keyframes gradientFlow {
   0% {
     background-position: 0% 50%;
