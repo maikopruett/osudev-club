@@ -15,6 +15,9 @@ export default function Main() {
           We're not just coding—we're shaping the future."
         </p>
       </div>
+      <button className='main-call-to-action-btn'>
+        Shape the Future
+      </button>
     </div>
   )
 }
