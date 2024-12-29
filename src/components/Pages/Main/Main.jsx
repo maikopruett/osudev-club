@@ -6,8 +6,8 @@ export default function Main() {
     <div className='main-container'>
       <h1 className="animated-logo">OSU Dev Club</h1>
       <div className="logo-underline"></div>
-      <div>
-        
+      <div className='hero-tagline'>
+        Where Innovation Meets Orange
       </div>
     </div>
   )
