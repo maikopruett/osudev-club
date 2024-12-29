@@ -26,7 +26,7 @@ export const projects = [
       shortDescription: "Event-hosting app for OSU students",
       fullDescription: "OSU Encore is a dedicated event-hosting platform for Oregon State University students, built with React and Supabase. It enables students to create, host, and discover a variety of events exclusive to OSU, such as parties, raves, and concerts. The app is designed to connect the OSU community, making it easier for students to find and join events, while also providing tools for event organizers to manage attendance and promote their gatherings.",
       technologies: ["React", "Supabase", "JavaScript", "CSS"],
-      imageUrl: "/project-images/osudevclub.png",
+      imageUrl: "/project-images/osuencore.jpg",
       links: {
         github: "https://github.com/username/osu-encore",
         live: "https://osuencore.example.com"
