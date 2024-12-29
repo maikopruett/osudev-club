@@ -29,6 +29,12 @@
   animation: underlineGrow 1.5s forwards ease-out;
 }
 
+.hero-tagline {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
 @keyframes gradientFlow {
   0% {
     background-position: 0% 50%;
