@@ -38,3 +38,9 @@
     background-position: 0% 50%;
   }
 }
+
+@keyframes underlineGrow {
+  to {
+    width: 100%;
+  }
+}
