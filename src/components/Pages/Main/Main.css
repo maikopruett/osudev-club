@@ -21,7 +21,7 @@
 
 .logo-underline {
   height: 4px;
-  width: 0;
+  width: 100px;
   background: linear-gradient(90deg, #ff6200, #ff4400);
   margin: 0.5rem auto;
   animation: underlineGrow 1.5s forwards ease-out;
@@ -41,6 +41,6 @@
 
 @keyframes underlineGrow {
   to {
-    width: 100%;
+    width: 550px;
   }
 }
