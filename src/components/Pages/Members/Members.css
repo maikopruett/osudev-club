@@ -8,6 +8,14 @@
   overflow: scroll;
 }
 
+.members-header.visible {
+  color: white;
+}
+
+.members-header.not-visible {
+  display: none;
+}
+
 .content-wrapper {
   text-align: center;
   opacity: 0;
@@ -175,7 +183,8 @@
   }
   
   .coming-soon-text {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-top: -25px;
   }
   
   .info-section.expanded {
@@ -200,37 +209,6 @@
   }
 
   .info-content {
-    height: 400px;
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
-    font-size: 2rem;
-  }
-  
-  .coming-soon-text {
-    font-size: 1.2rem;
-  }
-  
-  .info-button {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-  }
-
-  .info-content {
-    padding: 1rem;
-  }
-
-  .info-header {
-    font-size: 1.4rem;
-  }
-
-  .info-subheader {
-    font-size: 1.1rem;
-  }
-
-  .feature-item {
-    padding: 1rem;
+    height: 450px;
   }
 }

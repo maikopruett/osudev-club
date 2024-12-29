@@ -12,18 +12,21 @@ const Members = () => {
   return (
     <div className="members-container">
       <div className={`content-wrapper ${visible ? 'visible' : ''}`}>
-        <h1 className="title">
-          {'Members'.split('').map((letter, index) => (
-            <span 
-              key={index} 
-              className="floating-letter"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {letter}
-            </span>
-          ))}
-        </h1>
-        <div className="coming-soon-text">Coming Soon</div>
+        <div className={`members-header ${isExpanded ? 'not-visible' : 'visible'}`}>
+          <h1 className="title">
+            {'Members'.split('').map((letter, index) => (
+              <span 
+                key={index} 
+                className="floating-letter"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {letter}
+              </span>
+            ))}
+          </h1>
+          <div className="coming-soon-text">Coming Soon</div>
+        </div>
+  
         
         <button 
           className="info-button"
