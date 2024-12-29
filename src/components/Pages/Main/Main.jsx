@@ -11,8 +11,8 @@ export default function Main() {
       </div>
       <div className='hero-quote'>
         <p>
-          "We move fast and break things while others play it safe. Here at OSU Dev Club, 
-          we're not just coding - we're crafting the future."
+          "At OSU Dev Club, we move fast, break things, and build startups that matter. 
+          We're not just coding—we're shaping the future."
         </p>
       </div>
     </div>
