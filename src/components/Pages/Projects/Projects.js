@@ -22,21 +22,22 @@ export const projects = [
     },
     {
       id: 2,
-      title: "E-commerce Platform",
-      shortDescription: "Full-stack e-commerce solution",
-      fullDescription: "A complete e-commerce platform with user authentication, product management, and shopping cart functionality.",
-      technologies: ["React", "Node.js", "MongoDB"],
-      imageUrl: "/ecommerce.jpeg",
+      title: "OSU Encore",
+      shortDescription: "Event-hosting app for OSU students",
+      fullDescription: "OSU Encore is a dedicated event-hosting platform for Oregon State University students, built with React and Supabase. It enables students to create, host, and discover a variety of events exclusive to OSU, such as parties, raves, and concerts. The app is designed to connect the OSU community, making it easier for students to find and join events, while also providing tools for event organizers to manage attendance and promote their gatherings.",
+      technologies: ["React", "Supabase", "JavaScript", "CSS"],
+      imageUrl: "/osu-encore.webp",
       links: {
-        github: "https://github.com/username/ecommerce",
-        live: "https://ecommerce.example.com"
+        github: "https://github.com/username/osu-encore",
+        live: "https://osuencore.example.com"
       },
       features: [
-        "User authentication",
-        "Shopping cart",
-        "Payment integration"
+        "Event creation and management",
+        "RSVP and ticketing system",
+        "Real-time event updates",
+        "User authentication with email-based passcode login"
       ],
-      challenge: "Handling complex state management across the application.",
-      solution: "Utilized Redux for state management and implemented custom hooks for shared functionality."
+      challenge: "Building a seamless and intuitive event-management system while ensuring secure and smooth user authentication.",
+      solution: "Implemented Supabase for backend services, including user authentication and real-time event management. Focused on creating a simple, user-friendly interface that allows students to quickly create, discover, and engage with events."
     }
   ];
