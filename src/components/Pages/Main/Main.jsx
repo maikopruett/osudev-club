@@ -23,11 +23,10 @@ export default function Main() {
         <div className='mainpage-card mainpage-mission-card'>
           <h2 className='mainpage-card-title'>Our Mission</h2>
           <p className='mainpage-mission-text'>
-            We're a community of passionate developers at Oregon State University, 
-            dedicated to fostering innovation, collaboration, and technical excellence. 
-            Whether you're a coding novice or a seasoned developer, we provide the 
-            perfect environment to grow your skills, work on exciting projects, and 
-            connect with like-minded peers.
+          Welcome to the OSU Dev Club, a project built by a solo developer at Oregon State University!  
+          This initiative is dedicated to fostering innovation, collaboration, and technical excellence.  
+          Whether you're just starting your coding journey or you're an experienced developer, the OSU Dev Club provides a platform to grow your skills, explore exciting projects, and connect with like-minded students.
+
           </p>
         </div>
 
@@ -35,7 +34,7 @@ export default function Main() {
         <div className='mainpage-features'>
           <div className='mainpage-card mainpage-feature-card'>
             <div className='mainpage-feature-icon'>💻</div>
-            <h3 className='mainpage-feature-title'>Hands-on Projects</h3>
+            <h3 className='mainpage-feature-title'>Projects</h3>
             <p className='mainpage-feature-text'>
               Work on real-world projects and build your portfolio while learning from peers.
             </p>
@@ -45,7 +44,7 @@ export default function Main() {
             <div className='mainpage-feature-icon'>🤝</div>
             <h3 className='mainpage-feature-title'>Networking</h3>
             <p className='mainpage-feature-text'>
-              Connect with fellow developers and industry professionals through our events.
+              Connect with fellow developers.
             </p>
           </div>
 
