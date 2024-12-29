@@ -6,7 +6,7 @@ export const projects = [
       shortDescription: "OSU Dev Club built with React",
       fullDescription: "OSU Dev Club is a dynamic community for developers at Oregon State University, where innovation meets rapid execution. Our goal is to fund the club by swiftly developing app ideas shared within our Discord, building them rapidly, and generating profits to reinvest in future projects. We're a new kind of startup, where every member is encouraged to contribute ideas, collaborate on fast-paced development cycles, and create real-world products that make an impact. Join us to be part of something exciting, fast, and profitable.",
       technologies: ["React", "JavaScript", "CSS", "EmailJs"],
-      imageUrl: "/portfolio.webp",
+      imageUrl: "/project-images/osudevclub.png",
       links: {
         github: "https://github.com/username/portfolio",
         live: "https://portfolio.example.com"
@@ -26,7 +26,7 @@ export const projects = [
       shortDescription: "Event-hosting app for OSU students",
       fullDescription: "OSU Encore is a dedicated event-hosting platform for Oregon State University students, built with React and Supabase. It enables students to create, host, and discover a variety of events exclusive to OSU, such as parties, raves, and concerts. The app is designed to connect the OSU community, making it easier for students to find and join events, while also providing tools for event organizers to manage attendance and promote their gatherings.",
       technologies: ["React", "Supabase", "JavaScript", "CSS"],
-      imageUrl: "/osu-encore.webp",
+      imageUrl: "/project-images/osudevclub.png",
       links: {
         github: "https://github.com/username/osu-encore",
         live: "https://osuencore.example.com"
