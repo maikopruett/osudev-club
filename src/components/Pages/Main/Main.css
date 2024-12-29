@@ -37,6 +37,7 @@
 
 .hero-quote {
   max-width: 800px;
+  width: 90dvw;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -86,5 +87,25 @@
 @keyframes underlineGrow {
   to {
     width: 510px;
+  }
+}
+
+@media (max-width: 768px) {
+  .animated-logo {
+    font-size: 4rem;
+  }
+
+  .main-call-to-action-btn {
+    box-shadow: 0px 0px 20px #ff4400;
+  }
+
+  .main-call-to-action-btn:hover {
+    scale: 1;
+  }
+
+  @keyframes underlineGrow {
+    to {
+      width: 450px;
+    }
   }
 }
