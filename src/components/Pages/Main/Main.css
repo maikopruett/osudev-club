@@ -17,13 +17,15 @@
   background-clip: text;
   color: transparent;
   animation: gradientFlow 8s linear infinite;
+  margin-bottom: -10px;
 }
 
 .logo-underline {
   height: 4px;
-  width: 100px;
+  width: auto;
   background: linear-gradient(90deg, #ff6200, #ff4400);
-  margin: 0.5rem auto;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
   animation: underlineGrow 1.5s forwards ease-out;
 }
 
@@ -41,6 +43,6 @@
 
 @keyframes underlineGrow {
   to {
-    width: 550px;
+    width: 510px;
   }
 }
