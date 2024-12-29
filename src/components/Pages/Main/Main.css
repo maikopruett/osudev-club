@@ -26,7 +26,7 @@
   min-height: 100%;
   min-width: 100%;
   overflow: scroll;
-  background-color: #0d1117;
+  
 }
 
 .mainpage-background {
@@ -76,7 +76,7 @@
 }
 
 .mainpage-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -176,6 +176,7 @@
 
   .mainpage-card {
       padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.05);
   }
 
   .mainpage-features {
@@ -193,5 +194,9 @@
   .main-header h1 {
     font-size: 2rem;
     line-height: 40px;
+  }
+
+  .mainpage-container {
+    background-color: #0d1117;
   }
 }
