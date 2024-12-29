@@ -1,162 +1,228 @@
-.memberspage-container {
-    display: flex;
-    justify-content: center;
-    min-height: 100%;
-    min-width: 100%;
-    color: #fff;
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    overflow: scroll;
+.members-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  overflow: hidden;
+}
+
+.content-wrapper {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  max-width: 800px;
+  margin: 0 20px;
+}
+
+.content-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.title {
+  font-size: 4rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.floating-letter {
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+.coming-soon-text {
+  font-size: 2rem;
+  color: #a0a0a0;
+  margin-top: 1rem;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.info-button {
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.info-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.info-section {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.6s ease;
+  margin-top: 0;
+}
+
+.info-section.expanded {
+  max-height: 1200px;
+  opacity: 1;
+  margin-top: 2rem;
+}
+
+.info-content {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  text-align: left;
+}
+
+.info-header {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.info-block {
+  margin-bottom: 2rem;
+}
+
+.info-block:last-child {
+  margin-bottom: 0;
+}
+
+.info-subheader {
+  color: #e0e0e0;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.info-block p {
+  color: #a0a0a0;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.feature-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.feature-item h4 {
+  color: #d0d0d0;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.feature-item p {
+  color: #888888;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
   }
-  
-  .memberspage-background {
-    z-index: 1;
+  50% {
+    transform: translateY(-20px);
   }
-  
-  .memberspage-circle {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(60px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  @keyframes float1 {
-    0%, 100% { transform: translateY(0) translateX(0); }
-    50% { transform: translateY(30px) translateX(20px); }
+  to {
+    opacity: 1;
   }
-  
-  @keyframes float2 {
-    0%, 100% { transform: translateY(0) translateX(0); }
-    50% { transform: translateY(-40px) translateX(-25px); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .content-wrapper {
+    margin: 0 15px;
   }
-  
-  @keyframes float3 {
-    0%, 100% { transform: translateY(0) translateX(0); }
-    50% { transform: translateY(25px) translateX(-20px); }
-  }
-  
-  .memberspage-content {
-    z-index: 2;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .memberspage-title {
-    font-size: 3rem;
-    color: white;
-    margin-bottom: 30px;
-    margin-top: 80px;
-  }
-  
-  .memberspage-card {
-    background: rgba(0, 0, 0, 0.45);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    margin: 1rem 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .memberspage-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .memberspage-card-title {
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .memberspage-mission-text {
-    color: #a8b3cf;
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-  
-  .memberspage-features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3rem;
-  }
-  
-  .memberspage-feature-card {
-    text-align: center;
-    animation: fadeInUp 0.8s ease-out;
-    animation-fill-mode: both;
-  }
-  
-  .memberspage-feature-icon {
+
+  .title {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
   }
   
-  .memberspage-feature-title {
-    color: white;
+  .coming-soon-text {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
   }
   
-  .memberspage-feature-text {
-    color: #a8b3cf;
-    font-size: 1rem;
-    line-height: 1.5;
+  .info-section.expanded {
+    max-height: 2000px;
   }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .memberspage-title {
-      font-size: 2rem;
-    }
-  
-    .wave {
-      font-size: 50px;
-    }
-  
-    .memberspage-content {
-      padding: 1rem;
-    }
-  
-    .memberspage-card {
-      padding: 1.5rem;
-    }
-  
-    .memberspage-features {
-      grid-template-columns: 1fr;
-    }
-  
-    .memberspage-card-title {
-      font-size: 1.5rem;
-    }
-  
-    .memberspage-mission-text {
-      font-size: 1rem;
-    }
-  
-    .main-header h1 {
-      font-size: 2rem;
-      line-height: 40px;
-    }
 
-    .memberspage-container {
-      background: #14252d;
-    }
+  .info-content {
+    padding: 1.5rem;
+  }
 
-    .memberspage-card {
-      background: rgba(255, 255, 255, 0.05);
-    }
+  .info-header {
+    font-size: 1.6rem;
+  }
+
+  .info-subheader {
+    font-size: 1.2rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
   }
   
+  .coming-soon-text {
+    font-size: 1.2rem;
+  }
+  
+  .info-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .info-content {
+    padding: 1rem;
+  }
+
+  .info-header {
+    font-size: 1.4rem;
+  }
+
+  .info-subheader {
+    font-size: 1.1rem;
+  }
+
+  .feature-item {
+    padding: 1rem;
+  }
+}

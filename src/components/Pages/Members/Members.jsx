@@ -1,85 +1,77 @@
 import React, { useEffect, useState } from 'react';
 import './Members.css';
 
-export default function Members() {
-  const [activeUsers, setActiveUsers] = useState(0);
+const Members = () => {
+  const [visible, setVisible] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
-  // Simulate fetching the active user count from the Discord server (this is just an example)
   useEffect(() => {
-    const fetchActiveUsers = async () => {
-      // You can replace this with a real API call to get the number of active users
-      setActiveUsers(123); // Example number of active users
-    };
-
-    fetchActiveUsers();
+    setVisible(true);
   }, []);
 
   return (
-    <div className="memberspage-container">
-      {/* Animated background elements */}
-      <div className="memberspage-background">
-        <div className="memberspage-circle memberspage-circle1"></div>
-        <div className="memberspage-circle memberspage-circle2"></div>
-        <div className="memberspage-circle memberspage-circle3"></div>
-      </div>
+    <div className="members-container">
+      <div className={`content-wrapper ${visible ? 'visible' : ''}`}>
+        <h1 className="title">
+          {'Members'.split('').map((letter, index) => (
+            <span 
+              key={index} 
+              className="floating-letter"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              {letter}
+            </span>
+          ))}
+        </h1>
+        <div className="coming-soon-text">Coming Soon</div>
+        
+        <button 
+          className="info-button"
+          onClick={() => setIsExpanded(!isExpanded)}
+        >
+          {isExpanded ? 'Show Less' : 'Learn More'}
+        </button>
+        
+        <div className={`info-section ${isExpanded ? 'expanded' : ''}`}>
+          <div className="info-content">
+            <h2 className="info-header">Upcoming Discord Integration</h2>
+            
+            <section className="info-block">
+              <h3 className="info-subheader">Real-Time Server Analytics</h3>
+              <p>Our upcoming Members page will seamlessly integrate with your Discord server, providing comprehensive analytics and insights through our specialized bot. Stay informed about your community's growth and engagement patterns with just a glance.</p>
+            </section>
 
-      {/* Content container */}
-      <div className="memberspage-content">
-        {/* Header section */}
-        <div className="main-header">
-          <h1 className="memberspage-title">Members Page Coming Soon!</h1>
-        </div>
+            <section className="info-block">
+              <h3 className="info-subheader">Key Features</h3>
+              <div className="feature-grid">
+                <div className="feature-item">
+                  <h4>Member Activity</h4>
+                  <p>Track active users, engagement rates, and peak activity times</p>
+                </div>
+                <div className="feature-item">
+                  <h4>Role Analytics</h4>
+                  <p>Monitor role distribution and member progression</p>
+                </div>
+                <div className="feature-item">
+                  <h4>Channel Insights</h4>
+                  <p>Analyze channel popularity and usage patterns</p>
+                </div>
+                <div className="feature-item">
+                  <h4>Growth Metrics</h4>
+                  <p>View detailed membership growth and retention statistics</p>
+                </div>
+              </div>
+            </section>
 
-        {/* Mission statement card */}
-        <div className="memberspage-card memberspage-mission-card">
-          <h2 className="memberspage-card-title">About the Members Section</h2>
-          <p className="memberspage-mission-text">
-            The members section will allow you to view all members in a scrollable menu. 
-            You’ll be able to see the number of active users currently on the Discord server in real time.
-          </p>
-        </div>
-
-        {/* Features grid */}
-        <div className="memberspage-features">
-          <div className="memberspage-card memberspage-feature-card">
-            <div className="memberspage-feature-icon">👥</div>
-            <h3 className="memberspage-feature-title">Scrollable Member List</h3>
-            <p className="memberspage-feature-text">
-              View a scrollable list of all members, with quick access to their profiles.
-            </p>
+            <section className="info-block">
+              <h3 className="info-subheader">Coming Updates</h3>
+              <p>We're continuously working to enhance your server management experience. Stay tuned for regular updates and new features that will help you better understand and grow your community.</p>
+            </section>
           </div>
-
-          <div className="memberspage-card memberspage-feature-card">
-            <div className="memberspage-feature-icon">📊</div>
-            <h3 className="memberspage-feature-title">Active Users</h3>
-            <p className="memberspage-feature-text">
-              See how many members are currently active on the Discord server, updated in real time.
-            </p>
-          </div>
-
-          <div className="memberspage-card memberspage-feature-card">
-            <div className="memberspage-feature-icon">🔒</div>
-            <h3 className="memberspage-feature-title">Privacy Settings</h3>
-            <p className="memberspage-feature-text">
-              Customize your privacy settings to control who can view your profile and activities.
-            </p>
-          </div>
-
-          <div className="memberspage-card memberspage-feature-card">
-            <div className="memberspage-feature-icon">💬</div>
-            <h3 className="memberspage-feature-title">Chat Integration</h3>
-            <p className="memberspage-feature-text">
-              Connect with other members directly through integrated chat features.
-            </p>
-          </div>
-        </div>
-
-        {/* Active users card */}
-        <div className="memberspage-card">
-          <h3 className="memberspage-card-title">Current Active Users</h3>
-          <p className="memberspage-mission-text">There are currently {activeUsers} users active on the Discord server.</p>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Members;
