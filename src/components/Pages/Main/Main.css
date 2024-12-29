@@ -27,13 +27,14 @@
   background: linear-gradient(90deg, #ff6200, #ff4400);
   margin-top: 0;
   margin-bottom: 0.5rem;
-  animation: underlineGrow 1.5s forwards ease-out;
+  animation: underlineGrow 1s forwards ease-out;
 }
 
 .hero-tagline {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   color: rgba(255, 255, 255, 0.9);
+  animation: fadeIn 1s ease-in;
 }
 
 .hero-quote {
@@ -46,6 +47,11 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 1.25rem;
   line-height: 1.6;
+  animation: fadeinup 1s ease-out;
+}
+
+.hero-quote p {
+  animation: fadeinup 1s ease-out;
 }
 
 .main-call-to-action-btn {
@@ -58,7 +64,7 @@
   background: linear-gradient(90deg, #ff6200, #ff8c00, #ff4400);
   background-size: 200% 200%;
   color: white;
-  animation: gradientFlow 6s linear infinite; /* Simple idle animation */
+  animation: gradientFlow 6s linear infinite, fadeIn 1s ease-in; /* Simple idle animation */
   transition: 0.3s;
 }
 
@@ -86,17 +92,33 @@
 }
 
 @keyframes fadeIn {
-  0% {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
 
 @keyframes underlineGrow {
+  from {
+    opacity: 0;
+    width: 0px;
+  }
   to {
+    opacity: 1;
     width: 510px;
+  }
+}
+
+@keyframes fadeinup {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -114,6 +136,9 @@
   }
 
   @keyframes underlineGrow {
+    from {
+      opacity: 0;
+    }
     to {
       width: 450px;
     }
