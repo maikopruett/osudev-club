@@ -1,5 +1,6 @@
 import React from 'react'
 import './Main.css'
+import { NavLink } from 'react-router-dom'
 
 export default function Main() {
   return (
@@ -15,9 +16,11 @@ export default function Main() {
           We're not just coding—we're shaping the future."
         </p>
       </div>
-      <button className='main-call-to-action-btn'>
-        Shape the Future
-      </button>
+      <NavLink to={'/join-us'}>
+        <button className='main-call-to-action-btn'>
+          Shape the Future
+        </button>
+      </NavLink>
     </div>
   )
 }
