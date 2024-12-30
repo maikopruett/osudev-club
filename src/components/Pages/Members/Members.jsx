@@ -41,7 +41,7 @@ const Members = () => {
             
             <section className="info-block">
               <h3 className="info-subheader">Real-Time Server Analytics</h3>
-              <p>Our upcoming Members page will seamlessly integrate with your Discord server, providing comprehensive analytics and insights through our specialized bot. Stay informed about your community's growth and engagement patterns with just a glance.</p>
+              <p>The upcoming Members page will seamlessly integrate with our Discord server, providing comprehensive analytics and insights through our specialized bot. See our community's growth and engagement patterns with just a glance.</p>
             </section>
 
             <section className="info-block">
@@ -68,7 +68,7 @@ const Members = () => {
 
             <section className="info-block">
               <h3 className="info-subheader">Coming Updates</h3>
-              <p>We're continuously working to enhance your server management experience. Stay tuned for regular updates and new features that will help you better understand and grow your community.</p>
+              <p>We're continuously working to enhance our server management experience. Stay tuned for regular updates and new features that will help you connect with our growing community.</p>
             </section>
           </div>
         </div>
