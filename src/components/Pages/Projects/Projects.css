@@ -258,7 +258,7 @@
 
 @media (max-width: 768px) {
   .projects-title {
-    font-size: 2rem;
+    font-size: 2.7rem;
   }
   
   .modal-challenge-solution {
@@ -275,7 +275,7 @@
   }
   
   .projects-container {
-    padding: 1rem;
+    padding: 0rem;
   }
 
   .modal-content {
