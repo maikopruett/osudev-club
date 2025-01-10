@@ -10,56 +10,55 @@
 
 .animated-logo {
   font-size: 4.5rem;
+  animation: fadeIn 2s ease-in;
+}
+
+.animated-logo span {
+  font-size: 4.5rem;
   font-weight: 800;
   background: linear-gradient(45deg, #ff6200, #ff8c00, #ff4400, #ff6200);
-  background-size: 300% 300%;
+  background-size: 100% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   animation: gradientFlow 8s linear infinite;
   margin-bottom: -10px;
-  animation: fadeIn 1s ease-in;
+  animation: fadeIn 0.5s ease-in;
 }
 
 .logo-underline {
   height: 4px;
   width: auto;
-  background: linear-gradient(90deg, #ff6200, #ff4400);
+  background: linear-gradient(90deg, #ff4d00, #ffffff);
   margin-top: 0;
   margin-bottom: 0.5rem;
   animation: underlineGrow 1s forwards ease-out;
 }
 
 .hero-tagline {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+  font-size: 1.6rem;
   color: rgba(255, 255, 255, 0.9);
   animation: fadeIn 1s ease-in;
 }
 
-.hero-quote {
-  max-width: 800px;
-  width: 90dvw;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 1.25rem;
-  line-height: 1.6;
-  animation: fadeinup 1s ease-out;
-}
-
-.hero-quote p {
-  animation: fadeinup 1s ease-out;
+.hero-tagline span {
+  font-weight: 500;
+  background: linear-gradient(45deg, #ff6200, #ff8c00, #ff4400, #ff6200);
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientFlow 8s linear infinite;
+  margin-bottom: -10px;
+  animation: fadeIn 0.5s ease-in;
 }
 
 .main-call-to-action-btn {
-  padding: 5px 15px;
-  border-radius: 10px;
+  padding: 5px 30px;
+  border-radius: 30px;
   border: none;
   margin-top: 35px;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 800;
   background: linear-gradient(90deg, #ff6200, #ff8c00, #ff4400);
   background-size: 200% 200%;
@@ -107,7 +106,7 @@
   }
   to {
     opacity: 1;
-    width: 510px;
+    width: 480px;
   }
 }
 
