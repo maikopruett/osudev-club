@@ -41,7 +41,7 @@ export default function Nav() {
 
       {/* Mobile menu overlay */}
       <div className={`navnew-mobile-overlay ${isMenuOpen ? 'show' : ''}`}>
-        <ul className='navnew-mobile-menu'>
+        <ul className='navnew-mobile-menu flex flex-col gap-5'>
           <NavLink to={'/'} onClick={closeMenu}>
             <li>Home</li>
           </NavLink>
@@ -49,7 +49,7 @@ export default function Nav() {
             <li>Projects</li>
           </NavLink>
           <NavLink to={'/join-us'} onClick={closeMenu}>
-            <li>Join Us</li>
+            <li className='bg-orange-500 rounded-full'>Join Us</li>
           </NavLink>
         </ul>
       </div>
