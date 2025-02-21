@@ -18,20 +18,17 @@ export default function Nav() {
 
   return (
     <>
-      <div className='navnew-container'>
-        <ul className='navnew-desktop'>
+      <div className='navnew-container flex rounded-full shadow-slate-50/100 shadow-sm inset-shadow-slate-50/50 inset-shadow-xs backdrop-blur'>
+        <ul className='md:flex justify-between place-items-center w-full h-full font-bold hidden'>
           <NavLink to={'/'} onClick={closeMenu}>
-            <li>Home</li>
+            <li className='bg-white rounded-full'>Home</li>
           </NavLink>
-          <div className='navnew-right'>
+          <div className='flex gap-6'>
             <NavLink to={'/projects'} onClick={closeMenu}>
-              <li>Projects</li>
+              <li className='hover:bg-white hover:text-black text-white duration-300 rounded-full'>Projects</li>
             </NavLink>
             <NavLink to={'/join-us'} onClick={closeMenu}>
-              <li className='navnew-joinus-btn'>Join Us</li>
-            </NavLink>
-            <NavLink to={'/members'} onClick={closeMenu}>
-              <li>Members</li>
+              <li className='hover:bg-orange-500 duration-300 text-white rounded-full'>Join Us</li>
             </NavLink>
           </div>
         </ul>
@@ -52,10 +49,7 @@ export default function Nav() {
             <li>Projects</li>
           </NavLink>
           <NavLink to={'/join-us'} onClick={closeMenu}>
-            <li className='navnew-joinus-btn'>Join Us</li>
-          </NavLink>
-          <NavLink to={'/members'} onClick={closeMenu}>
-            <li>Members</li>
+            <li>Join Us</li>
           </NavLink>
         </ul>
       </div>

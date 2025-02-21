@@ -59,7 +59,7 @@ const Joinus = () => {
         <div className="joinus-mobile-circle2"></div>
       </div>
 
-      <div className="joinus-card">
+      <div className="joinus-card shadow-slate-50/50 shadow-sm inset-shadow-slate-50/50 inset-shadow-xs">
         <div className="joinus-content">
           <h1 className="joinus-title">Join Our Discord</h1>
           <p className="joinus-subtitle">Connect with fellow OSU developers!</p>
