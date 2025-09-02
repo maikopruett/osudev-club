@@ -18,10 +18,10 @@ export default function Nav() {
 
   return (
     <>
-      <div className='navnew-container flex rounded-full shadow-slate-50/100 shadow-sm inset-shadow-slate-50/50 inset-shadow-xs backdrop-blur'>
+      <div className='navnew-container flex rounded-full shadow-slate-50/40 shadow-xs inset-shadow-slate-50/50 inset-shadow-xs backdrop-blur'>
         <ul className='md:flex justify-between place-items-center w-full h-full font-bold hidden'>
           <NavLink to={'/'} onClick={closeMenu}>
-            <li className='bg-white rounded-full'>Home</li>
+            <li className='hover:bg-white hover:text-black text-white duration-300 rounded-full'>Home</li>
           </NavLink>
           <div className='flex gap-6'>
             <NavLink to={'/projects'} onClick={closeMenu}>
