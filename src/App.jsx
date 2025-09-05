@@ -8,7 +8,7 @@ import Verification from "./components/Pages/Verification/Verification";
 function App() {
   return (
     <BrowserRouter>
-      <Nav />
+      {/* <Nav /> */}
       <Routes>
         <Route path='/' element={<Main />}/>
         <Route path='/projects' element={<Projects />}/>
