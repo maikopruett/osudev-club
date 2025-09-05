@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 import './Main.css'
+import { NavLink } from 'react-router-dom'
 
 export default function Main({ beaverCount = 25 }) {
   const beavers = useMemo(() => {
@@ -45,7 +46,9 @@ export default function Main({ beaverCount = 25 }) {
         <p className='text-white text-4xl font-medium'>
           Where development meets <span className='text-orange-500 font-bold'>orange</span>
         </p>
-        <a className='mt-5 text-xl inline-block rounded-full px-7 py-2 text-white shadow-slate-50/40 shadow-xs inset-shadow-slate-50/50 inset-shadow-xs backdrop-blur' href="/join-us">Join Us</a>
+        <NavLink to="/join-us">
+          <a className='mt-5 text-xl inline-block rounded-full px-7 py-2 text-white shadow-slate-50/40 shadow-xs inset-shadow-slate-50/50 inset-shadow-xs backdrop-blur' >Join Us</a>
+        </NavLink>
       </div>
     </div>
   )
